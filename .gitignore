@@ -12,7 +12,6 @@ __pycache__
 *.pyd
 .pytest_cache
 
-
 # MacOS
 .DS_Store
 
