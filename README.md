@@ -43,6 +43,8 @@ A Model Context Protocol (MCP) server for Cisco Security Advisories. This server
     ```
     The server uses `python-dotenv` to load these variables. Alternatively, you can set them directly in your shell environment.
 
+    **Note on Security:** While using a `.env` file is convenient for local development, for production or shared environments, consider more secure methods for managing secrets, such as using a dedicated secrets management tool (e.g., Conjur, HashiCorp Vault, AWS Secrets Manager, Azure Key Vault) or platform-provided environment variable injection. Avoid committing your `.env` file to version control if it contains sensitive credentials.
+
 ## Running the Server
 
 To start the MCP server, ensure your virtual environment is activated and your `.env` file is set up. Then, run the following command from the project root:
