@@ -1,0 +1,6 @@
+requests
+mcp
+python-dotenv
+fastmcp
+pytest
+pytest-mock
