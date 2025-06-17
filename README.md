@@ -45,13 +45,19 @@ An Model Context Protocol (MCP) server for Cisco Security Advisories. This serve
 
 ## Running the Server
 
-To start the MCP server, run the `openvuln_mcp_server.py` script:
+To start the MCP server, ensure your virtual environment is activated and your `.env` file is set up. Then, run the following command from the project root:
 
 ```bash
-python openvuln_mcp_server.py
+fastmcp run src/openvuln_mcp_server.py:mcp_server
 ```
 
-The server will start and print a message indicating it's running and listening for MCP requests. By default, the `mcp.server` library usually starts on `localhost:8000` unless configured otherwise.
+Alternatively, if `fastmcp` is installed in your virtual environment (`.venv` by default):
+
+```bash
+.venv/bin/fastmcp run src/openvuln_mcp_server.py:mcp_server
+```
+
+The server will start using Uvicorn (via `fastmcp`) and will typically be available on `http://localhost:8000`. You'll see output indicating the server is running.
 
 ## Available MCP Tools
 
@@ -80,7 +86,7 @@ The `CiscoOpenVulnClient` class handles:
 -   Client-side rate limiting to comply with API quotas (per second, per minute, and per day).
 -   Making requests to various OpenVuln API endpoints.
 
-The `openvuln_mcp_server.py` script initializes this client and registers several functions as tools with an `mcp.Server` instance. These tools can then be invoked by an MCP client.
+The `src/openvuln_mcp_server.py` script initializes this client. It then uses `FastMCP` (from `mcp.server.fastmcp`) to define an MCP server instance (named `mcp_server`). Tool functions are registered with this server instance using the `@mcp_server.tool()` decorator. These tools can then be invoked by an MCP client.
 
 ## Contributing
 
