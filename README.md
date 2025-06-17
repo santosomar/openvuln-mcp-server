@@ -70,7 +70,7 @@ The server exposes the following tools via the Model Context Protocol:
     -   **Parameters:** `advisory_id` (string) - e.g., "cisco-sa-iosxe-trustsec-bypass-LqL32QG"
 -   `get_cisco_cve_details`
     -   **Description:** Retrieves details for a specific Common Vulnerability and Exposure (CVE) identifier from Cisco.
-    -   **Parameters:** `cve_id` (string) - e.g., "CVE-2023-20078"
+    -   **Parameters:** `cve_id` (string) - e.g., "CVE-2025-20188"
 -   `get_latest_cisco_advisories`
     -   **Description:** Retrieves the most recently published Cisco security advisories.
     -   **Parameters:** `number` (integer, optional, default: 5)
