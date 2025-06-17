@@ -1,6 +1,6 @@
 # OpenVuln MCP Server
 
-An Model Context Protocol (MCP) server for Cisco Security Advisories. This server provides tools to retrieve and list security advisories from the [Cisco OpenVuln API.](https://developer.cisco.com/docs/psirt/)
+A Model Context Protocol (MCP) server for Cisco Security Advisories. This server provides tools to retrieve and list security advisories from the [Cisco OpenVuln API.](https://developer.cisco.com/docs/psirt/)
 
 ## Features
 
